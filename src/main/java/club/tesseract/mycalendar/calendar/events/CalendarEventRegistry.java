@@ -28,7 +28,7 @@ public class CalendarEventRegistry {
     );
     public static final CalendarEvent WEEKEND_EVENT = new CalendarEvent(
             "new_month",
-            new RepeatedTimeCondition(0L, TimeSpecification.MONTH, TimeSpecification.YEAR),
+            new RepeatedTimeCondition(TimeSpecification.MONTH, TimeSpecification.YEAR),
             time -> {
                 Component message = Component.text("It's ")
                         .append(Component.text(MinecraftCalendar.getMonth()));
