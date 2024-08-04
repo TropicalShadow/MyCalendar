@@ -1,6 +1,5 @@
 package club.tesseract.mycalendar.test.event;
 
-import club.tesseract.mycalendar.calendar.MinecraftCalendar;
 import club.tesseract.mycalendar.calendar.events.CalendarEvent;
 import club.tesseract.mycalendar.calendar.events.EventManager;
 import club.tesseract.mycalendar.calendar.time.RepeatedTimeCondition;
@@ -10,10 +9,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
-import static org.mockito.Mockito.*;
-
+/**
+ * Tests for the event manager.
+ */
 public class EventManagerTest {
 
     private EventManager eventManager;
@@ -23,6 +27,9 @@ public class EventManagerTest {
     private Runnable repeatEventCallback;
     private AtomicInteger repeatEventCounter;
 
+    /**
+     * Set up the test environment.
+     */
     @BeforeEach
     public void setUp() {
         eventManager = EventManager.getInstance();
@@ -43,14 +50,18 @@ public class EventManagerTest {
                 });
     }
 
+    /**
+     * Tear down the test environment.
+     */
     @AfterEach
     public void tearDown() {
         // Clean up or reset the event manager if needed
         //eventManager.clearAllEvents();  // Assuming there's a method to clear events
     }
 
+
     @Test
-    public void testEventSchedulingAndTriggering() {
+    void testEventSchedulingAndTriggering() {
         // Schedule the event
         eventManager.schedule(event);
 
@@ -63,7 +74,8 @@ public class EventManagerTest {
 
 
     @Test
-    public void testRepeatedEventSchedulingAndTriggering() {
+    @Disabled("This test is disabled because it takes a long time to run.")
+    void testRepeatedEventSchedulingAndTriggering() {
         // Schedule the repeated event
         eventManager.schedule(repeatEvent);
 

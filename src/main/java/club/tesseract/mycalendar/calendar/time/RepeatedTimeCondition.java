@@ -31,10 +31,11 @@ public class RepeatedTimeCondition implements TimedCondition {
     /**
      * Creates a new condition that is satisfied at the given time.
      *
-     * @param initialOffset the initial offset of the condition
+     * @param repeater the repeater for the condition
      * @param modulator the modulator for the condition
      */
-    public RepeatedTimeCondition(long initialOffset,  TimeSpecification repeater, TimeSpecification modulator) {
+    public RepeatedTimeCondition(TimeSpecification repeater,
+                                 TimeSpecification modulator) {
         this(repeater.getTime(), modulator.getTime());
     }
 
