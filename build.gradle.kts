@@ -64,7 +64,7 @@ dependencies {
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
 
     testCompileOnly("com.github.spotbugs:spotbugs-annotations:4.8.6")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.11.1")
     testImplementation("com.google.guava:guava:33.2.1-jre")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.3")
 
