@@ -68,7 +68,7 @@ dependencies {
     testImplementation("com.google.guava:guava:33.2.1-jre")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.3")
 
-    testImplementation("org.mockito:mockito-core:5.5.0")
+    testImplementation("org.mockito:mockito-core:5.14.0")
     testImplementation("org.mockito:mockito-junit-jupiter:5.5.0")
 }
 
