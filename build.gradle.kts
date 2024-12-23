@@ -66,7 +66,7 @@ dependencies {
     testCompileOnly("com.github.spotbugs:spotbugs-annotations:4.8.6")
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.2")
     testImplementation("com.google.guava:guava:33.2.1-jre")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.11.4")
 
     testImplementation("org.mockito:mockito-core:5.14.1")
     testImplementation("org.mockito:mockito-junit-jupiter:5.14.1")
